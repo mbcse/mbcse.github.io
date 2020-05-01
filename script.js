@@ -37,7 +37,7 @@ Controller.prototype.handleRequest = function (direction, floor) {
 
 /* Button class */
 var Button = function (buttonType, floorNum, floorId) {
-    Controller.apply(this); // TODO comment this?
+    Controller.apply(this); 
     this.buttonType = buttonType; // 1 is up, -1 is down
     this.buttonFloor = floorNum;
     this.buttonTypeString = (this.buttonType == 1) ? 'up_button' : 'down_button';
@@ -49,7 +49,7 @@ var Button = function (buttonType, floorNum, floorId) {
     $('#' + floorId).append (this.buttonHtml);
     $('#' + this.buttonId).click( this.buttonPressed.bind(this) );
 }
-Button.prototype = Object.create(Controller.prototype);Button.prototype.constructor = Button; // TODO comment this?
+Button.prototype = Object.create(Controller.prototype);Button.prototype.constructor = Button; 
 Button.prototype.buttonPressed = function() {
     console.log('button pressed from button');
     this.handleRequest(this.buttonType, this.buttonFloor);
