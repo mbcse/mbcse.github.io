@@ -68,9 +68,7 @@ $(".google-button").click(function (e) {
         if (result.credential) {
  
           var token = result.credential.accessToken;
-      
-         
-       
+
         }
       
         var user = result.user;
