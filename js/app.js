@@ -1,12 +1,6 @@
 $(document).ready(function () {
 
-    firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-          alert("user signed in")
-        } else {
-            alert("user not signed in")
-        }
-      });
+
 
     // header dropdown opening and closing
 
@@ -35,7 +29,7 @@ $(document).ready(function () {
     e.preventDefault();
     console.log(firebase);
     firebase.auth().createUserWithEmailAndPassword($('.email-input').val(), $('.password-input').val()).catch(function(error) {
-       console.log("working");
+       
         var errorCode = error.code;
         var errorMessage = error.message;
     
@@ -45,24 +39,12 @@ $(document).ready(function () {
           alert(errorMessage);
         }
         console.log(error);
+
+        alert("User Created Successfully, Please Login Now");
       });
 
     
-      firebase.auth().signInWithEmailAndPassword($('.email-input').val(), $('.password-input').val()).catch(function(error) {
-   
-        var errorCode = error.code;
-        var errorMessage = error.message;
-     
-        if (errorCode === 'auth/wrong-password') {
-          alert('Wrong password.');
-        } else {
-          alert(errorMessage);
-        }
-        console.log(error);
        
-       
-        
-      });  
 
      
         
@@ -81,7 +63,7 @@ $(".google-button").click(function (e) {
         if (result.credential) {
  
           var token = result.credential.accessToken;
-    
+          alert("User Created Successfully, Please Login Now");
         }
       
         var user = result.user;
@@ -110,6 +92,7 @@ firebase.auth().getRedirectResult().then(function(result) {
   if (result.credential) {
     
     var token = result.credential.accessToken;
+    alert("User Created Successfully, Please Login Now");
   }
   var user = result.user;
 }).catch(function(error) {
