@@ -28,13 +28,13 @@ $(document).ready(function () {
   $(".email-submit").click(function (e) {
     e.preventDefault();
     console.log(firebase);
-    firebase.auth().createUserWithEmailAndPassword($('.email-input').val(), $('.password-input').val()).then((user)=>
-    {
-      alert("Account Created");
-      window.location.href = "./html/org.html";
-      
-    }).catch(function(error) {
+    firebase.auth().createUserWithEmailAndPassword($('.email-input').val(), $('.password-input').val()).catch(function(error) {
        
+        if(!error)
+        {
+          alert("Account Created");
+          window.location.href = "./html/org.html";
+        }
         var errorCode = error.code;
         var errorMessage = error.message;
     
