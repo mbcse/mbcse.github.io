@@ -44,8 +44,7 @@ $(document).ready(function () {
       });
 
     
-      alert("User Created Successfully, Please Login Now");
-      window.location.href = "./html/org.html";
+      
 
      
         
@@ -79,8 +78,6 @@ $(".google-button").click(function (e) {
    
       });
 
-      alert("User Created Successfully, Please Login Now");
-      window.location.href = "./html/org.html";
   
 });
 
@@ -119,8 +116,7 @@ $(".github-button").click(function (e) {
 
         });
 
-        alert("User Created Successfully, Please Login Now");
-              window.location.href = "./html/org.html";
+       
 
 });
 
