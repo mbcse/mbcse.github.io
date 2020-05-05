@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../css/feed-final.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/org.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAf_zRuuyMTQAnIwXCUTSEvyfwH40lkbDE",
+      authDomain: "opensourcecode2020.firebaseapp.com",
+      databaseURL: "https://opensourcecode2020.firebaseio.com",
+      projectId: "opensourcecode2020",
+      storageBucket: "opensourcecode2020.appspot.com",
+      messagingSenderId: "34900038841",
+      appId: "1:34900038841:web:7755a157c10816f3e8f768",
+      measurementId: "G-M79PEFEHC0"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+    <title>OpenSourceCode</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="../index.html">OPEN<span>&ltSOURCE&gt</span>CODE</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="links">
+        <a href="feed-final.html">Feed</a>
+        <a href="org.html">Organizations</a>
+        <a href="">How To Contribute</a>
+        <div class="header-profile-picture">
+          <img class="profile-picture" src="../SVG/profile-pic-3-image.jpg" />
+          <div class="header-profile-dropdown display-none">
+            <a href="../profile/profile.html"
+              ><img src="../SVG/profile-icon.svg" />Profile</a
+            >
+            <a href="#"><img src="../SVG/computer.svg"/>Create OSP</a>
+            <a href="settings.html"
+              ><img src="../SVG/setting-icon.svg" />Settings</a
+            >
+            <a href="../index.html"
+              ><img src="../SVG/log-out-icon.svg" />Log Out</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Start here -->
+    <div class="org">
+      <div class="left-col">
+        <h1 class="org-heading">ORGANIZATIONS</h1>
+
+        <p>Find an organization to contribute to</p>
+        <p>
+          Cant find the organization you are searching for? Search below to
+          narrow down your results
+        </p>
+      </div>
+      <div class="right-col">
+        <img src="../SVG/organisation-top-image.png" alt="" srcset="" />
+      </div>
+    </div>
+    <div class="top-bar">
+      <div class="search-bar">
+        <form class="search-bar-form">
+          <input
+            type="search"
+            class="search-input"
+            placeholder="Search Projects"
+          />
+        </form>
+        <div class="filter-mobile display-none">
+          Filter <img src="../SVG/dropdown-arrow.svg" />
+        </div>
+      </div>
+      <div class="filter-mobile-hide">
+        <div class="filter-mobile-dropdown display-none">
+          <div class="filter-left-col">
+            <ul class="dropdown-list-filter">
+              <li>
+                <img src="../SVG/yellow.svg" />
+                <p>JavaScript</p>
+              </li>
+              <li>
+                <img src="../SVG/peach.svg" />
+                <p>HTML</p>
+              </li>
+              <li>
+                <img src="../SVG/sea-green.svg" />
+                <p>CSS</p>
+              </li>
+
+              <li>
+                <img src="../SVG/pink.svg" />
+                <p>Python</p>
+              </li>
+            </ul>
+          </div>
+          <div class="filter-right-col display-non">
+            <ul class="dropdown-list-filter">
+              <li>New</li>
+              <li>Top</li>
+              <li>Hot</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="control-page-items">
+        <ul class="filter-items">
+          <li class="dropdown filter sort">
+            <a class="dropdown-label dropdown-label-sort"
+              >Newest <img src="../SVG/dropdown-arrow.svg"
+            /></a>
+            <ul class="dropdown-list dropdown-list-sort display-none">
+              <li>New</li>
+              <li>Top</li>
+              <li>Hot</li>
+            </ul>
+          </li>
+          <li class="dropdown filter language-sort">
+            <a class="dropdown-label dropdown-label-languages"
+              >All languages <img src="../SVG/dropdown-arrow.svg"
+            /></a>
+            <ul class="dropdown-list dropdown-list-languages display-none">
+              <li>
+                <img src="../SVG/yellow.svg" />
+                <p>JavaScript</p>
+              </li>
+              <li>
+                <img src="../SVG/peach.svg" />
+                <p>HTML</p>
+              </li>
+              <li>
+                <img src="../SVG/sea-green.svg" />
+                <p>CSS</p>
+              </li>
+
+              <li>
+                <img src="../SVG/pink.svg" />
+                <p>Python</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card-org">
+        <div class="line">
+          <p class="org-name">ORGANIZATION #1</p>
+          <button id="idview" class="org-view" type="submit">
+            <img src="../SVG/Icon metro-enlarge.svg" />
+          </button>
+        </div>
+        <p class="orgdes">
+          Description of organisation. Random texts coming here and there. Lets
+          enter something to fill these spaces. This is just a sample of the
+          text that is to be enterd into the boxes.
+        </p>
+        <div class="org-tags">
+          <button class="tag javascript" type="submit">
+            React.js
+          </button>
+          <button class="tag html" type="submit">
+            Node.js
+          </button>
+          <button class="tag css" type="submit">
+            Node.js
+          </button>
+        </div>
+      </div>
+      <div class="card-org">
+        <div class="line">
+          <p class="org-name">ORGANIZATION #1</p>
+          <button id="idview" class="org-view" type="submit">
+            <img src="../SVG/Icon metro-enlarge.svg" />
+          </button>
+        </div>
+        <p class="orgdes">
+          Description of organisation. Random texts coming here and there. Lets
+          enter something to fill these spaces. This is just a sample of the
+          text that is to be enterd into the boxes.
+        </p>
+        <div class="org-tags">
+          <button class="tag javascript" type="submit">
+            React.js
+          </button>
+          <button class="tag html" type="submit">
+            Node.js
+          </button>
+          <button class="tag css" type="submit">
+            Node.js
+          </button>
+        </div>
+      </div>
+      <div class="card-org">
+        <div class="line">
+          <p class="org-name">ORGANIZATION #1</p>
+          <button class="org-view" type="submit" id="idview">
+            <img src="../SVG/Icon metro-enlarge.svg" />
+          </button>
+        </div>
+        <p class="orgdes">
+          Description of organisation. Random texts coming here and there. Lets
+          enter something to fill these spaces. This is just a sample of the
+          text that is to be enterd into the boxes.
+        </p>
+        <div class="org-tags">
+          <button class="tag javascript" type="submit">
+            React.js
+          </button>
+          <button class="tag html" type="submit">
+            Node.js
+          </button>
+          <button class="tag css" type="submit">
+            Node.js
+          </button>
+        </div>
+      </div>
+      <div class="card-org">
+        <div class="line">
+          <p class="org-name">ORGANIZATION #1</p>
+          <button class="org-view" type="submit" id="idview">
+            <img src="../SVG/Icon metro-enlarge.svg" />
+          </button>
+        </div>
+        <p class="orgdes">
+          Description of organisation. Random texts coming here and there. Lets
+          enter something to fill these spaces. This is just a sample of the
+          text that is to be enterd into the boxes.
+        </p>
+        <div class="org-tags">
+          <button class="tag javascript" type="submit">
+            React.js
+          </button>
+          <button class="tag html" type="submit">
+            Node.js
+          </button>
+          <button class="tag css" type="submit">
+            Node.js
+          </button>
+        </div>
+      </div>
+      <div class="card-org">
+        <div class="line">
+          <p class="org-name">ORGANIZATION #1</p>
+          <button class="org-view" type="submit" id="idview">
+            <img src="../SVG/Icon metro-enlarge.svg" />
+          </button>
+        </div>
+        <p class="orgdes">
+          Description of organisation. Random texts coming here and there. Lets
+          enter something to fill these spaces. This is just a sample of the
+          text that is to be enterd into the boxes.
+        </p>
+        <div class="org-tags">
+          <button class="tag javascript" type="submit">
+            React.js
+          </button>
+          <button class="tag html" type="submit">
+            Node.js
+          </button>
+          <button class="tag css" type="submit">
+            Node.js
+          </button>
+        </div>
+      </div>
+      <div class="card-org">
+        <div class="line">
+          <p class="org-name">ORGANIZATION #1</p>
+          <button class="org-view" type="submit" id="idview">
+            <img src="../SVG/Icon metro-enlarge.svg" />
+          </button>
+        </div>
+        <p class="orgdes">
+          Description of organisation. Random texts coming here and there. Lets
+          enter something to fill these spaces. This is just a sample of the
+          text that is to be enterd into the boxes.
+        </p>
+        <div class="org-tags">
+          <button class="tag javascript" type="submit">
+            React.js
+          </button>
+          <button class="tag html" type="submit">
+            Node.js
+          </button>
+          <button class="tag css" type="submit">
+            Node.js
+          </button>
+        </div>
+      </div>
+      <div class="card-org">
+        <div class="line">
+          <p class="org-name">ORGANIZATION #1</p>
+          <button class="org-view" type="submit" id="idview">
+            <img src="../SVG/Icon metro-enlarge.svg" />
+          </button>
+        </div>
+        <p class="orgdes">
+          Description of organisation. Random texts coming here and there. Lets
+          enter something to fill these spaces. This is just a sample of the
+          text that is to be enterd into the boxes.
+        </p>
+        <div class="org-tags">
+          <button class="tag javascript" type="submit">
+            React.js
+          </button>
+          <button class="tag html" type="submit">
+            Node.js
+          </button>
+          <button class="tag css" type="submit">
+            Node.js
+          </button>
+        </div>
+      </div>
+      <div class="card-org">
+        <div class="line">
+          <p class="org-name">ORGANIZATION #1</p>
+          <button class="org-view" type="submit" id="idview">
+            <img src="../SVG/Icon metro-enlarge.svg" />
+          </button>
+        </div>
+        <p class="orgdes">
+          Description of organisation. Random texts coming here and there. Lets
+          enter something to fill these spaces. This is just a sample of the
+          text that is to be enterd into the boxes.
+        </p>
+        <div class="org-tags">
+          <button class="tag javascript" type="submit">
+            React.js
+          </button>
+          <button class="tag html" type="submit">
+            Node.js
+          </button>
+          <button class="tag css" type="submit">
+            Node.js
+          </button>
+        </div>
+      </div>
+      <div class="card-org">
+        <div class="line">
+          <p class="org-name">ORGANIZATION #1</p>
+          <button class="org-view" type="submit" id="idview">
+            <img src="../SVG/Icon metro-enlarge.svg" />
+          </button>
+        </div>
+        <p class="orgdes">
+          Description of organisation. Random texts coming here and there. Lets
+          enter something to fill these spaces. This is just a sample of the
+          text that is to be enterd into the boxes.
+        </p>
+        <div class="org-tags">
+          <button class="tag javascript" type="submit">
+            React.js
+          </button>
+          <button class="tag html" type="submit">
+            Node.js
+          </button>
+          <button class="tag css" type="submit">
+            Node.js
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="idpop" class="pop">
+      <div class="pop-content">
+        <div class="pop-flex top-row">
+          <h1 class="pop-heading">ORGANIZATION NAME</h1>
+          <span class="closeBtn">&times;</span>
+        </div>
+        <p class="giturl">user/repo_name</p>
+        <p class="Abt">About Us</p>
+        <p>
+          This will describe about the organisation and the contents of the
+          organisation. The details will be given here. The one viewing this
+          gets a good idea about the organisation
+        </p>
+        <div class="pop-flex bottom-row">
+          <div>
+            <p class="toprep">Top Repositories</p>
+            <p class="silt">
+              Silt Your Throat <span class="url">www.github.com/username</span>
+            </p>
+            <p class="silt">
+              Silt Your Throat <span class="url">www.github.com/username</span>
+            </p>
+            <p class="silt">
+              Silt Your Throat <span class="url">www.github.com/username</span>
+            </p>
+            <p class="silt">
+              Silt Your Throat <span class="url">www.github.com/username</span>
+            </p>
+            <p class="silt">
+              Silt Your Throat <span class="url">www.github.com/username</span>
+            </p>
+            <p class="silt">
+              Silt Your Throat <span class="url">www.github.com/username</span>
+            </p>
+          </div>
+          <div>
+            <div class="org-side-box">
+              <p class="side">LANGUAGES</p>
+              <div class="org-tags">
+                <button class="tag javascript" type="submit">
+                  React.js
+                </button>
+                <button class="tag html" type="submit">
+                  Node.js
+                </button>
+                <button class="tag css" type="submit">
+                  Node.js
+                </button>
+              </div>
+            </div>
+            <div class="org-side-box">
+              <p class="side">TOPICS</p>
+              <div class="org-tags">
+                <button class="tag javascript" type="submit">
+                  Topic 1
+                </button>
+                <button class="tag html" type="submit">
+                  Topic 2
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End here -->
+
+    <script src="../js/feed.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/org.js"></script>
+    <script src="../js/landingPage.js"></script>
+  </body>
+</html>

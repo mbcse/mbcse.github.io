@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <link rel="stylesheet" href="../css/settings.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>OpenSourceCode</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="../index.html">OPEN<span>&ltSOURCE&gt</span>CODE</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="links">
+        <a href="feed-final.html">Feed</a>
+        <a href="org.html">Organizations</a>
+        <a href="">How To Contribute</a>
+        <div class="header-profile-picture">
+          <img class="profile-picture" src="../SVG/profile-pic-3-image.jpg" />
+          <div class="header-profile-dropdown display-none">
+            <a href="../profile/profile.html"
+              ><img src="../SVG/profile-icon.svg" />Profile</a
+            >
+            <a href="#"><img src="../SVG/computer.svg"/>Create OSP</a>
+
+            <a href="settings.html"
+              ><img src="../SVG/setting-icon.svg" />Settings</a
+            >
+            <a href="../index.html"
+              ><img src="../SVG/log-out-icon.svg" />Log Out</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Start here -->
+
+    <div class="disappear1" id="disappear1">
+      <div class="how-flex">
+        <div class="col right-col">
+          <div class="num-block">
+            <div class="num">
+              <div class="num-first">
+                <p>01</p>
+              </div>
+              <div class="num-second">
+                <p>/03</p>
+              </div>
+            </div>
+          </div>
+          <div class="option">
+            <p class="basicinfo" style="font-weight: 700;">Basic Information</p>
+            <p class="aboutyou">About You</p>
+            <p class="socials">Socials</p>
+          </div>
+        </div>
+        <div class="col left-col">
+          <div class="letstart">
+            <p>Lets Get Started</p>
+          </div>
+          <div class="qns">
+            <p>What is your email?</p>
+            <input class="input" placeholder="Email" />
+            <p>What is your First Name?</p>
+            <input class="input" placeholder="First Name" />
+            <p>What is your Last Name?</p>
+            <input class="input" placeholder="Last Name" />
+            <p>Enter a unique Username</p>
+            <input class="input" placeholder="Username" />
+          </div>
+          <div class="script">
+            <p>Only letters, numbers and underscores are allowed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="disappear2" id="disappear2">
+      <div class="how-flex">
+        <div class="col">
+          <div class="num">
+            <div class="num-first">
+              <p>02</p>
+            </div>
+            <div class="num-second">
+              <p>/03</p>
+            </div>
+          </div>
+
+          <div class="option">
+            <p class="basicinfo">Basic Information</p>
+            <p class="aboutyou" style="font-weight: 700;">About You</p>
+            <p class="socials">Socials</p>
+          </div>
+        </div>
+        <div class="col left-col">
+          <div class="letstart">
+            <p>What do you do?</p>
+          </div>
+          <div class="qns">
+            <p>Title</p>
+            <input class="input" placeholder="Developer, Student, Programmer" />
+            <p>About</p>
+            <input
+              class="input-bio"
+              placeholder="A short bio of less than 120 characters"
+            />
+            <p>Skills</p>
+            <input
+              class="input-skills"
+              id="myInput"
+              placeholder="Enter your skills"
+            />
+          </div>
+          <div class="script">
+            <span onclick="newElement()" class="addBtn">Add</span>
+            <p>Press Enter to add the skill. Enter minimum five skills</p>
+
+            <ul id="myUL"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="disappear3" id="disappear3">
+      <div class="how-flex">
+        <div class="col">
+          <div class="num">
+            <div class="num-first">
+              <p>03</p>
+            </div>
+            <div class="num-second">
+              <p>/03</p>
+            </div>
+          </div>
+
+          <div class="option">
+            <p class="basicinfo">Basic Information</p>
+            <p class="aboutyou">About You</p>
+            <p class="socials" style="font-weight: 700;">Socials</p>
+          </div>
+        </div>
+        <div class="col left-col">
+          <div class="letstart">
+            <p>Where can others find you online?</p>
+          </div>
+          <div class="script-new">
+            <p>
+              Please provide the full url. Leave empty if you dont't want to
+              give
+            </p>
+          </div>
+          <div class="qns">
+            <p>Website</p>
+            <input class="input" placeholder="https://your-website.com/" />
+            <p>Github</p>
+            <input class="input" placeholder="https://github.com/" />
+            <p>LinkedIn</p>
+            <input class="input" placeholder="https://linkedin.com/in/" />
+
+            <p>Twitter</p>
+            <input class="input" placeholder="https://twitter.com/" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End here -->
+
+    <script src="../js/setting.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/landingPage.js"></script>
+  </body>
+</html>

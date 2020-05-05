@@ -1,0 +1,204 @@
+@import "./animation_custom.css";
+@import "./fonts.css";
+
+#mainProfile{
+    box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3);
+    border-radius: 15px;
+    background-color: rgba(248, 248, 255, 0.3);
+    margin-top: 200px;
+}
+
+#main_profile_row{
+    display: flex;
+    flex-direction: row;
+}
+
+#profile_img_card{
+    background: transparent;
+    border: none;
+    margin-top: -150px;
+}
+
+#profile_img{
+    border-radius: 20px;
+    height: 240px;
+    background-image: url('../img/aryasoni.jpg');
+    background-size: cover;
+}
+
+#profile_container{
+    max-width: 100%;
+    flex-grow: 1;
+}
+
+#social_icons{
+    color: rgba(0,0,0,0.7);
+    font-size: 1.7em;
+    word-spacing: 15px;
+}
+
+#profile_name{
+    font-family: montserrat_bold;
+    color: black;
+}
+
+#profile_username{
+    font-family: montserrat;
+    color: rgba(0,0,0,0.4);
+}
+
+#profile_designation{
+    font-family: montserrat;
+    color: rgba(0,0,0,0.7);
+}
+
+#profile_about{
+    font-family: montserrat;
+    color: rgba(0,0,0,0.8);
+}
+
+#profile_name.fadein{
+    animation: fadein 0.6s ease-out;
+    animation-iteration-count: 1;
+}
+
+#profile_username.fadein{
+    animation: fadein2 1.2s ease-out;
+    animation-iteration-count: 1;
+}
+
+#profile_designation.fadein{
+    animation: fadein3 1.8s ease-out;
+    animation-iteration-count: 1;
+}
+
+#profile_about.fadein{
+    animation: fadein4 3.0s ease-out;
+    animation-iteration-count: 1;
+}
+
+#design_prop_1{
+    height: 2px;
+    background: linear-gradient(to right, #00FF00, #01A9DB);
+}
+
+#design_prop_2{
+    border-radius: 16px;
+    width: 80%;
+    height: 7px;
+    background: linear-gradient(to right,#01A9DB, #00FF00);
+}
+
+#design_prop_1.spread{
+    animation: spread 3.0s ease-out;
+    animation-iteration-count: 1;
+}
+
+#profile_about_text{
+    font-family: montserrat;
+    color: rgba(0,0,0,0.5);
+}
+
+#profile_about_text.fadein{
+    animation: fadein4 3.0s ease-out;
+    animation-iteration-count: 1;
+}
+
+#profile_skills{
+    font-family: montserrat;
+    color: rgba(0,0,0,0.8);
+}
+
+#skill1{
+    border-radius: 16px;
+}
+
+#skill2{
+    border-radius: 16px;
+}
+
+#profile_strength_title{
+    color: rgba(0,0,0,0.8);
+    font-family: montserrat;
+}
+
+#profile_strength_text{
+    word-spacing: 10px;
+    font-family: montserrat;
+    margin: auto 0;
+}
+
+#profile_strength_tick{
+    color: rgba(1,169,219,0.8);
+    font-size: 2em;
+}
+
+#profile_info>div{
+    background: transparent;
+    border: none;
+}
+
+#profile_info>div>h2{
+    color: rgba(0,0,0,0.7);
+    font-family: montserrat_bold;
+}
+
+#profile_info>div>h5{
+    color: rgba(0,0,0,0.7);
+    font-family: montserrat;
+}
+
+#profile_strength.spread{
+    animation: fadein4 3s ease-out;
+    animation-iteration-count: 1;
+}
+
+#profile_skills.spread{
+    animation: fadein4 3s ease-out;
+    animation-iteration-count: 1;
+}
+
+#skills_list.spread{
+    animation: fadein4 3s ease-out;
+    animation-iteration-count: 1;
+}
+
+#profile_info.spread{
+    animation: fadein4 1.4s ease-out;
+    animation-iteration-count: 1;
+}
+
+@media only screen and (max-width: 768px){
+    #profile_info>div{
+        width: inherit;
+    }
+}
+
+@media only screen and (min-width:991px){
+    #profile_container{
+        margin-top: -160px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 992px){
+    #profile_info>div{
+        width: inherit;
+    }
+
+    #profile_info>div>h2{
+        font-size: 20px;
+    }
+
+    #profile_info>div>h5{
+        font-size: 11px;
+    }
+}
+
+@media only screen and (min-width:991px){
+    #profile_container{
+        margin-top: -160px;
+    }
+    
+}

@@ -1,29 +1,222 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>TDG ELEVATOR BY MOhit</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAf_zRuuyMTQAnIwXCUTSEvyfwH40lkbDE",
+    authDomain: "opensourcecode2020.firebaseapp.com",
+    databaseURL: "https://opensourcecode2020.firebaseio.com",
+    projectId: "opensourcecode2020",
+    storageBucket: "opensourcecode2020.appspot.com",
+    messagingSenderId: "34900038841",
+    appId: "1:34900038841:web:7ccbfccd90075aa1e8f768",
+    measurementId: "G-N1XF9V4BGK"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+</script>
+    <title>OpenSourceCode</title>
   </head>
-
   <body>
-     <h2 style="text-align: center;">Hi, WELCOME TO TDG BUILDING <br> by mohit</h2>
-    <div id="floors">
-      <ul class="horizontal floors" id="floors_list">
-        <li class="header">Floor controls</li>
-        <!-- floor li -->
-      </ul>
+    <header>
+      <div class="logo">
+        <a href="../index.html">OPEN<span>&ltSOURCE&gt</span>CODE</a>
+      </div>
+    </header>
+
+    <h5 class="welcome-title">WELCOME TO OPEN SOURCE CODE PLATFORM</h5>
+    <a href="html/feed-final.html">Feed</a>
+    <a href="html/settings.html">settings</a>
+    <a href="html/org.html">Organisation</a>
+
+    <p class="landing-text">
+      Search and Contribute to Some of the Best<br />
+      <span>OPEN SOURCE PROJECTS</span>
+    </p>
+    <div class="landing-container">
+      <div class="row">
+        <div class="left-col-img">
+          <img src="SVG/left-SVG.svg" />
+        </div>
+        <div class="left-col">
+          <div class="sign-in-buttons">
+            <button class="email-button" type="submit">
+              <img src="SVG/Icon material-email.svg" />
+              <p>Sign in with email</p>
+            </button>
+            <button class="google-button" type="submit">
+              <img src="SVG/Icon simple-google.svg" />
+              <p>Sign in with Google</p>
+            </button>
+            <button class="github-button" type="submit">
+              <img src="SVG/Icon awesome-github.svg" />
+              <p>Sign in with Github</p>
+            </button>
+          </div>
+          <div class="email-section">
+            <h3>Sign in with email.</h3>
+            <form class="email">
+              <input
+                type="email"
+                class="email-input sign-in-input"
+                placeholder="Email"
+              />
+              <div class="name">
+                <input
+                  type="text"
+                  class="name-fname sign-in-input"
+                  placeholder="First Name"
+                />
+                <input
+                  type="text"
+                  class="name-lname sign-in-input"
+                  placeholder="Last Name"
+                />
+              </div>
+
+              <input
+                type="password"
+                class="password-input sign-in-input"
+                placeholder="Choose password"
+              />
+              <div class="email-buttons">
+                <button type="submit" class="email-submit">Submit</button>
+                <button type="submit" class="email-next">Next</button>
+                <button class="email-cancel">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="right-col">
+          <img src="SVG/right-svg.svg" />
+        </div>
+      </div>
+    </div>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="about-us-curve"
+      viewBox="0 0 1440 320"
+    >
+      <path
+        fill="#F7F7F7"
+        fill-opacity="1"
+        d="M0,192L60,186.7C120,181,240,171,360,149.3C480,128,600,96,720,106.7C840,117,960,171,1080,181.3C1200,192,1320,160,1380,144L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+      ></path>
+    </svg>
+    <div class="about-us-container">
+      <div class="about-left-col">
+        <img src="SVG/about-left-SVG.svg" />
+      </div>
+      <div class="about-right-col">
+        <h1>ABOUT OSC</h1>
+        <br /><br />
+        <p>
+          No one rejects, dislikes, or avoids pleasure itself, because it is
+          pleasure, but because those who do not know how to pursue pleasure
+          rationally encounter consequences that are extremely painful. Nor
+          again is there anyone who loves or pursues or desires to obtain pain
+          of itself, because it is pain, but because occasionally circumstances
+          occur in which toil and pain can procure.
+        </p>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#f7f7f7"
+        fill-opacity="1"
+        d="M0,64L48,96C96,128,192,192,288,224C384,256,480,256,576,229.3C672,203,768,149,864,138.7C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+      ></path>
+    </svg>
+    <div class="how-container">
+      <div class="how-top-row">
+        <div class="how-top-left-col">
+          <h1>HOW OSC WORKS?</h1>
+          <p>
+            Some random text about how we function. What all things we do and
+            how It will benefit ou.t. Below are a few processes on how we
+            function.Some random text about how we function. What all things we
+            do and how It will benefit ou.t. Below are a few processes on how we
+            function.Some random text about how we function.
+          </p>
+        </div>
+        <div class="how-top-right-col">
+          <img src="SVG/how-right-SVG.svg" />
+        </div>
+      </div>
+      <div class="how-bottom-row">
+        <div class="how-card">
+          <img src="SVG/how-card-sample3-SVG.svg" />
+          <h3>Work #1</h3>
+          <p>
+            We can do this and that In this way so as contain our knowledge and
+            have a goodnights sleep
+          </p>
+        </div>
+        <div class="how-card">
+          <img src="SVG/how-card-sample2-SVG.svg" />
+          <h3>Work #2</h3>
+          <p>
+            We can do this and that In this way so as contain our knowledge and
+            have a goodnights sleep
+          </p>
+        </div>
+        <div class="how-card">
+          <img src="SVG/how-card-sample1-SVG.svg" />
+          <h3>Work #3</h3>
+          <p>
+            We can do this and that In this way so as contain our knowledge and
+            have a goodnights sleep
+          </p>
+        </div>
+      </div>
     </div>
 
-    <div id="elevators">
-      <ul class="horizontal elevators" id="elevators_list">
-        <li class="header">Elevator status</li>
-        <!-- elevator li -->
-      </ul>
-    </div>
+    <footer>
+      <h1>REACH OUT TO US ON.</h1>
+      <div class="reach-links">
+        <a href="https://github.com/OpenSouceCode" target="_blank"
+          ><img src="SVG/footer-github.svg"
+        /></a>
+        <a
+          href="https://join.slack.com/t/opensourcecode/shared_invite/zt-dcirfg6f-IYydr1qUsAAYaq_ZA48jmg"
+          target="_blank"
+          ><img src="SVG/footer-slack.svg"
+        /></a>
+        <a href="http://" target="_blank"
+          ><img src="SVG/footer-linkedin.svg"
+        /></a>
+      </div>
+    </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/landingPage.js"></script>
   </body>
 </html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile|OSC</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="./css/bootstrap-reboot.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style_profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="./images/icon.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <header>
+    <div class="logo">
+      <a href="../index.html">OPEN<span>&ltSOURCE&gt</span>CODE</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div class="links">
+      <a href="feed-final.html">Feed</a>
+        <a href="org.html">Organizations</a>
+        <a href="">How To Contribute</a>
+      <div class="header-profile-picture">
+        <img class="profile-picture" src="../SVG/profile-pic-3-image.jpg" />
+        <div class="header-profile-dropdown display-none">
+          <a href="#"><img src="../SVG/profile-icon.svg" />Profile</a>
+          <a href="#"><img src="../SVG/computer.svg"/>Create OSP</a>
+          <a href="settings.html"
+            ><img src="../SVG/setting-icon.svg" />Settings</a
+          >
+          <a href="../index.html"
+            ><img src="../SVG/log-out-icon.svg" />Log Out</a
+          >
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <body>
+    <div class="container p-4 col-xs-12 mb-4" id="mainProfile">
+      <div class="row no-gutters" id="main_profile_row">
+        <div
+          class="card col-sm-12 mr-2 ml-2 mb-2 p-0 col-lg-3 pl-3 pr-3 h-100"
+          id="profile_img_card"
+        >
+          <img class="card-img-top" id="profile_img" />
+          <div class="card-body pt-0">
+            <p class="card-text" id="social_icons" align="center">
+              <i class="fa fa-github m-1"></i>
+              <i class="fa fa-linkedin-square m-1"></i>
+              <i class="fa fa-twitter m-1"></i>
+              <i class="fa fa-facebook m-1"></i>
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="container-fluid col-sm-12 col-lg-6 mr-2 mb-2 ml-2 p-4"
+          id="profile_container"
+        >
+          <h1 class="card-title spreadout mb-0" id="profile_name">Arya Soni</h1>
+          <h6 class="card-title spreadout mt-0" id="profile_username">
+            <b>alslcmd</b>
+          </h6>
+          <h4 class="card-title spreadout mt-0" id="profile_designation">
+            Developer
+          </h4>
+          <div class="container spreadout" id="design_prop_1"></div>
+          <h2 class="card-title spreadout" id="profile_about"><b>About</b></h2>
+          <p class="card-text spreadout" id="profile_about_text">
+            I learn to satisfy my thoughts. I am always looking for
+            opportunities to meet new people and work together. I like solving
+            problems and creating solutions. I want to give back to people and
+            nature the nurtured me and any work regarding the same is of special
+            importance to me. I have the passion for inventing stuff, designing
+            solutions and learn new things.
+          </p>
+          <h4 class="card-title spreadout" id="profile_skills">
+            <b>Skills</b>
+          </h4>
+          <div class="row no-gutters spreadout mb-0 pb-0" id="skills_list">
+            <div class="btn btn-outline-dark mr-1 pt-0 pb-0" id="skill1">
+              Web Development
+            </div>
+            <div class="btn btn-outline-dark ml-1 pt-0 pb-0" id="skill2">
+              JavaScript
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row no-gutters mt-0 mr-4 ml-4 spreadout" id="profile_info">
+        <div class="container col-md-2 col-lg-3">
+          <h2><b>1</b></h2>
+          <h5>OSP</h5>
+        </div>
+        <div class="container col-md-2 col-lg-3">
+          <h2><b>0</b></h2>
+          <h5>Follow</h5>
+        </div>
+        <div class="container col-md-2 col-lg-3">
+          <h2><b>0</b></h2>
+          <h5>Save</h5>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="../js/app.js"></script>
+  </body>
+</html>
