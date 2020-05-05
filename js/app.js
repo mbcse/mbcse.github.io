@@ -45,6 +45,7 @@ $(document).ready(function () {
 
     
       alert("User Created Successfully, Please Login Now");
+      window.location.href = "./html/org.html";
 
      
         
@@ -63,7 +64,7 @@ $(".google-button").click(function (e) {
         if (result.credential) {
  
           var token = result.credential.accessToken;
-          alert("User Created Successfully, Please Login Now");
+       
         }
       
         var user = result.user;
@@ -77,6 +78,9 @@ $(".google-button").click(function (e) {
         var credential = error.credential;
    
       });
+
+      alert("User Created Successfully, Please Login Now");
+      window.location.href = "./html/org.html";
   
 });
 
@@ -84,36 +88,39 @@ $(".google-button").click(function (e) {
 $(".github-button").click(function (e) {
   e.preventDefault();
 
-var githubprovider = new firebase.auth.GithubAuthProvider();
-githubprovider.addScope('repo');
-firebase.auth().signInWithRedirect(githubprovider);
+        var githubprovider = new firebase.auth.GithubAuthProvider();
+        githubprovider.addScope('repo');
+        firebase.auth().signInWithRedirect(githubprovider);
 
-firebase.auth().getRedirectResult().then(function(result) {
-  if (result.credential) {
-    
-    var token = result.credential.accessToken;
-    alert("User Created Successfully, Please Login Now");
-  }
-  var user = result.user;
-}).catch(function(error) {
-  
-  var errorCode = error.code;
-  var errorMessage = error.message;
+        firebase.auth().getRedirectResult().then(function(result) {
+          if (result.credential) {
+            
+            var token = result.credential.accessToken;
+            alert("User Created Successfully, Please Login Now");
+          }
+          var user = result.user;
+        }).catch(function(error) {
+          
+          var errorCode = error.code;
+          var errorMessage = error.message;
 
-  var email = error.email;
+          var email = error.email;
 
-  var credential = error.credential;
-  if (errorCode === 'auth/account-exists-with-different-credential') {
-    alert('You have signed up with a different provider for that email.');
- 
-  } else {
-    console.error(error);
-  }
-});
+          var credential = error.credential;
+          if (errorCode === 'auth/account-exists-with-different-credential') {
+            alert('You have signed up with a different provider for that email.');
+        
+          } else {
+            console.error(error);
+          }
+        });
 
 
 
-});
+        });
+
+        alert("User Created Successfully, Please Login Now");
+              window.location.href = "./html/org.html";
 
 });
 
