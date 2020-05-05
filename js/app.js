@@ -40,11 +40,11 @@ $(document).ready(function () {
         }
         console.log(error);
 
-        alert("User Created Successfully, Please Login Now");
+        
       });
 
     
-       
+      alert("User Created Successfully, Please Login Now");
 
      
         
