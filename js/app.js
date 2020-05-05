@@ -103,7 +103,7 @@ $(".github-button").click(function (e) {
   e.preventDefault();
 
 var githubprovider = new firebase.auth.GithubAuthProvider();
-provider.addScope('repo');
+githubprovider.addScope('repo');
 firebase.auth().signInWithRedirect(githubprovider);
 
 firebase.auth().getRedirectResult().then(function(result) {
